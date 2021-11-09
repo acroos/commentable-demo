@@ -4,6 +4,8 @@ source "https://rubygems.org"
 
 ruby "3.0.2"
 
-gem "sinatra", "~> 2.1"
-
-gem "aws-record", "~> 2.7"
+gem "aws-record"
+gem "oj"
+gem "ox"
+gem "puma"
+gem "sinatra"

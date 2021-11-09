@@ -18,6 +18,11 @@ GEM
     jmespath (1.4.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.8)
+    oj (3.13.9)
+    ox (2.14.6)
+    puma (5.5.2)
+      nio4r (~> 2.0)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
@@ -32,10 +37,14 @@ GEM
 PLATFORMS
   x86_64-darwin-20
   x86_64-darwin-21
+  x86_64-linux-musl
 
 DEPENDENCIES
-  aws-record (~> 2.7)
-  sinatra (~> 2.1)
+  aws-record
+  oj
+  ox
+  puma
+  sinatra
 
 RUBY VERSION
    ruby 3.0.2p107
