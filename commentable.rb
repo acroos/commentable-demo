@@ -29,8 +29,10 @@ get '/' do
   'OK'
 end
 
-post '/' do
+post '/:commentable_id/comments' do |commentable_id|
   data = Oj.load(request.body.read)
+  data[:commentable_id] = commentable_id
+  data[:comment_id] = SecureRandom.uuid
 
   comment = Comment.new(data)
   comment.save
@@ -38,12 +40,12 @@ post '/' do
   Oj.dump comment.to_h
 end
 
-get '/:commentable_id' do |commentable_id|
+get '/:commentable_id/comments' do |commentable_id|
   comments = Comment.where(commentable_id: commentable_id)
   Oj.dump comments.map(&:to_h)
 end
 
-delete '/:commentable_id/comment/:comment_id' do |commentable_id, comment_id|
+delete '/:commentable_id/comments/:comment_id' do |commentable_id, comment_id|
   comment = Comment.find(commentable_id: commentable_id, comment_id: comment_id)
   comment.delete!
 
