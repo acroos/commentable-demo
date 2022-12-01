@@ -16,27 +16,28 @@ GEM
     aws-sigv4 (1.4.0)
       aws-eventstream (~> 1, >= 1.0.2)
     jmespath (1.4.0)
-    mustermann (1.1.1)
+    mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
     oj (3.13.9)
     ox (2.14.6)
     puma (5.5.2)
       nio4r (~> 2.0)
-    rack (2.2.3)
-    rack-protection (2.1.0)
+    rack (2.2.4)
+    rack-protection (2.2.3)
       rack
     ruby2_keywords (0.0.5)
-    sinatra (2.1.0)
-      mustermann (~> 1.0)
+    sinatra (2.2.3)
+      mustermann (~> 2.0)
       rack (~> 2.2)
-      rack-protection (= 2.1.0)
+      rack-protection (= 2.2.3)
       tilt (~> 2.0)
-    tilt (2.0.10)
+    tilt (2.0.11)
 
 PLATFORMS
   x86_64-darwin-20
   x86_64-darwin-21
+  x86_64-linux
   x86_64-linux-musl
 
 DEPENDENCIES
