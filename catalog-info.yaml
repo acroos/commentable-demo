@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: commentable-demo
+  annotations:
+    github.com/project-slug: acroos/commentable-demo
+spec:
+  type: other
+  lifecycle: unknown
+  owner: acroos
